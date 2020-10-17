@@ -28,8 +28,7 @@ class App extends Component {
 
   }
   onButtonClick=()=>{
-
-    app.models.predict('6744cbc8104940eba90468d428f3383f',"https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/prototypen/w_sexy_gr.jpg").then(
+  /*    app.models.predict('6744cbc8104940eba90468d428f3383f',"https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/prototypen/w_sexy_gr.jpg").then(
     function(response){
      console.log(response);
     },
@@ -37,7 +36,7 @@ class App extends Component {
       // body...
     }
 
-    );
+    );*/
   }
   render(){
     return (
@@ -46,7 +45,7 @@ class App extends Component {
      <Particles className="particles particles-box" params={particlesOptions} />
       <Navigation/>
       <Logo />
-      <Rank/>
+      <Rank />
       <SearchBox onInputChange={this.onInputChange} onButtonClick={this.onButtonClick}/>
       {/*
        6744cbc8104940eba90468d428f3383f  
