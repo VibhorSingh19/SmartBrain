@@ -6,6 +6,10 @@
  justify-content:center;
 
 }
+.centerBlock{
+  width: 320px;
+  height: auto;
+}
 .particles{
 
   position: fixed;
