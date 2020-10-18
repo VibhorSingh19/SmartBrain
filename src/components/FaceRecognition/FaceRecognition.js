@@ -1,10 +1,14 @@
 import React from 'react';
-function FaceRecognition({imageUrl}) {
+import './FaceRecognition.css'
+function FaceRecognition({imageUrl,box}) {
   return (
-    <div className="center centerBlock pa3 grow shadow-2">
-     <img src={imageUrl} alt=""/>
-    </div>
+    <div className="center centerBlock grow shadow-2">
+     <img id="inputImage" src={imageUrl} alt=""/>
+     <div className="bounding-box" style={{top: box.topRow,right: box.rightCol,bottom: box.bottomRow,left: box.leftCol}}></div>
+   
+     </div>
+
   );
 }
-
+ 
 export default FaceRecognition;
