@@ -66,13 +66,17 @@ displayFaceBox=(box)=>{
   }
   onRouteChange=(route)=>{
    this.setState({rout:route});
-   if(this.state.rout==='home')
+   if(route==='SignIn')
    {
-    this.setState({isSignedIn:true});
+    this.setState({isSignedIn:false});
   }
-   else
+  else if(route==='register')
    {
    this.setState({isSignedIn:false});
+  }
+   else if(route==='home')
+   {
+   this.setState({isSignedIn:true});
   }
   }
   render(){
