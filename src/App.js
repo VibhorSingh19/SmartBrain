@@ -31,6 +31,7 @@ class App extends Component {
 
   calculateFaceLocation=(data)=>{
    const clarifaiFace= data.outputs[0].data.regions[0].region_info.bounding_box;
+   //console.log(clarifaiFace);
    const inputImage=document.getElementById("inputImage");
    const width=Number(inputImage.width);
    const height=Number(inputImage.height);
@@ -43,8 +44,9 @@ class App extends Component {
    }
   }
 displayFaceBox=(box)=>{
+  
   this.setState({box:box});
-
+  //console.log(box.topRow);
 }
   
   onButtonClick=()=>{
@@ -54,7 +56,8 @@ displayFaceBox=(box)=>{
       .then(response =>this.displayFaceBox(this.calculateFaceLocation(response)))
       .catch(err => console.log(err));
     //console.log(response.outputs[0].data.regions[0].region_info.bounding_box;); 
-    
+    //<div className="bounding-box" style={{top: box.topRow,right: box.rightCol,bottom: box.bottomRow,left: box.leftCol}}></div>
+   
   }
   
   render(){
@@ -67,7 +70,7 @@ displayFaceBox=(box)=>{
       <Rank />
       <SearchBox onInputChange={this.onInputChange} onButtonClick={this.onButtonClick}/>
       
-      <FaceRecognition cox={this.state.box} imageUrl={this.state.imageUrl}/>
+      <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl}/>
     
     </div>
   );
