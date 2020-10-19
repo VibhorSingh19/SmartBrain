@@ -76,7 +76,8 @@ displayFaceBox=(box)=>{
   }
    else if(route==='home')
    {
-   this.setState({isSignedIn:true});
+    this.setState({isSignedIn:true});
+    
   }
   }
   render(){
