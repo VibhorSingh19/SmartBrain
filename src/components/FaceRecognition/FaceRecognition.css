@@ -5,8 +5,5 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 cursor: pointer;
-top: box.topRow;
-right: box.rightCol;
-bottom: box.bottomRow; 
-left: box.leftCol;
+
 }
