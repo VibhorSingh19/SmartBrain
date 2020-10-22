@@ -29,6 +29,7 @@ class App extends Component {
     }
 
   }
+
   onInputChange=(event) =>{
    this.state.input=event.target.value;
    console.log(this.state.input);
