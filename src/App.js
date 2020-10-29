@@ -25,11 +25,18 @@ class App extends Component {
       imageUrl:'',
       box:{},
       rout:"SignIn",
-      isSignedIn:false
+      isSignedIn:false,
+      user:{
+        id:'',
+        email:'',
+        
+      }
     }
 
   }
+ UpdateInfo=()=>{
 
+ }
   onInputChange=(event) =>{
    this.state.input=event.target.value;
    console.log(this.state.input);
