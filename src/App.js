@@ -34,8 +34,10 @@ class App extends Component {
     }
 
   }
- UpdateInfo=()=>{
-
+ UpdateInfo=(data)=>{
+ this.setState(user:{
+  id=
+ })
  }
   onInputChange=(event) =>{
    this.state.input=event.target.value;
