@@ -29,14 +29,15 @@ class App extends Component {
       user:{
         id:'',
         email:'',
-        
+        entries:0,
+        joined:''
       }
     }
 
   }
  UpdateInfo=(data)=>{
  this.setState(user:{
-  id=
+  id=data.io
  })
  }
   onInputChange=(event) =>{
