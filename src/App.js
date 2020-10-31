@@ -30,11 +30,13 @@ class App extends Component {
         id:'',
         name:'',
         email:'',
-        entries:0,
+        entries: 0,
         joined:''
       }
 
   }
+}
+
  loadUser=(data)=>{
  this.setState({user:{
   id: data.id,
@@ -118,12 +120,8 @@ displayFaceBox=(box)=>{
         <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
         
       }
-      
-      
-    
     </div>
   );
 }
 }
-
 export default App;
