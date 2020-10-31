@@ -28,20 +28,21 @@ class App extends Component {
       isSignedIn:false,
       user:{
         id:'',
+        name:'',
         email:'',
         entries:0,
         joined:''
       }
 
   }
- UpdateInfo=(data)=>{
- this.setState(user:{
-  id=data.id,
-  name=data.name,
-  email=data.email,
-  entries:data.entries,
-  joined:data.joined
- })
+ loadUser=(data)=>{
+ this.setState({user:{
+  id: data.id,
+  name: data.name,
+  email: data.email,
+  entries: data.entries,
+  joined: data.joined
+ }})
  }
   onInputChange=(event) =>{
    this.state.input=event.target.value;
@@ -94,7 +95,8 @@ displayFaceBox=(box)=>{
     
   }
   }
-  render(){
+  render()
+  {
     return (
     <div className="App" >
      
@@ -113,7 +115,7 @@ displayFaceBox=(box)=>{
         this.state.rout==='SignIn' ?
         <SignIn onRouteChange={this.onRouteChange}/>
         :
-        <Register onRouteChange={this.onRouteChange}/>
+        <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
         
       }
       
