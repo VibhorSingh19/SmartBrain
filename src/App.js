@@ -167,7 +167,7 @@ displayFaceBox=(box)=>{
           
         :
         this.state.rout==='SignIn' ?
-        <SignIn onRouteChange={this.onRouteChange}/>
+        <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
         :
         <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
         
